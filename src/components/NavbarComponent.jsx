@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
 const NavbarComponent = () => {
@@ -8,19 +9,16 @@ const NavbarComponent = () => {
 
       {/* Enlaces alineados a la derecha */}
       <div className="navLinks">
-        <a href="#" className="alink">
-          Productos
-        </a>
-        <a href="#" className="alink">
-          Más vendidos
-        </a>
-
-        <a href="#" className="alink">
-          Contacto
-        </a>
-        <a href="#" className="alink">
-          Ofertas
-        </a>
+        <NavLink to='/' className="alink">   Carreras  </NavLink>
+        <NavLink to='/amateur' className="alink"> Amateur </NavLink>
+      
+        <NavLink to='/profesional' className="alink"> Profesional</NavLink>
+        
+        <NavLink to='/familiar' className="alink">Familiar</NavLink>
+        
+        <a href="#" className="alink"> Contacto  </a>
+         
+      
         <CartWidget />
       </div>
     </nav>

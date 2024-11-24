@@ -8,7 +8,9 @@ const ItemDetail = ({producto}) => {
 
 
   return (
-    <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+   
+   <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+    <span></span>
       <h2 >Detalle de {producto.name}</h2>
       <img src={producto.imagen} alt={producto.nombre} />
       <p>{producto.lugar}</p>

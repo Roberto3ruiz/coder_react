@@ -28,9 +28,9 @@ const handleonAdd = () =>{
  return (
    <>
    <div>
-      <button onClick={sumar}>+</button>
+      <button onClick={sumar}> + </button>
       <span> {count} </span>
-      <button onClick={restar}>-</button>
+      <button onClick={restar}> - </button>
     </div>
     <button onClick={handleonAdd}  disabled={count===0}    >Agregar</button>
 
