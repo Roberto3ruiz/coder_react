@@ -1,0 +1,46 @@
+.text-center {
+  text-align: center;
+}
+
+.navContainer {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(72, 72, 72);
+}
+
+.navLinks {
+  display: flex;
+  gap: 15px; /* Corrige el espacio en `gap: 15px;` */
+}
+
+.logo {
+  width: 150px; /* Reduce el ancho del logo si es necesario */
+  height: auto;
+}
+
+.alink {
+  color: azure;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.alink:hover {
+  color: #ffd700; /* Cambia el color al pasar el cursor */
+}
+
+.cartWidgetContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cartIcon {
+  width: 2rem; /* Ajusta el tamaño del icono del carrito */
+}
+
+.cartCounter {
+  color: orange;
+}
