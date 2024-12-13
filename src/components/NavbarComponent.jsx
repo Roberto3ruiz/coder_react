@@ -18,8 +18,10 @@ const NavbarComponent = () => {
         
         <a href="#" className="alink"> Contacto  </a>
          
-      
+        <NavLink to='/cart' className="alink">
         <CartWidget />
+        </NavLink>
+       
       </div>
     </nav>
   );
