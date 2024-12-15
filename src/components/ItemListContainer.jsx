@@ -16,6 +16,14 @@ const ItemListContainer = ({ greeting }) => {
         // Conectar con la colección en Firestore
         const productsCollection = collection (db, "productos");
 
+
+        // Otra opcion
+        // const productsCollection = categoryId
+        // ? query ( collection (db, "productos"),
+        // where ("category", "==", categoryId))
+        //  : collection (db, "productos");
+
+
         // Pedir documentos
         getDocs(productsCollection)
             .then((res) => {
