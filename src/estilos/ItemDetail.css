@@ -1,0 +1,79 @@
+/* Contenedor principal */
+.item-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Imagen del producto */
+  .item-detail-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+  }
+  
+  /* Título */
+  .item-detail-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Lugar */
+  .item-detail-location {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Información adicional */
+  .item-detail-info {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  /* Precio */
+  .item-detail-price {
+    font-size: 1.5rem;
+    color: #ff5722;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Botones y enlaces */
+  .item-detail-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .item-detail-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botón del contador */
+  .item-count-button {
+    margin-top: 1rem;
+  }
+  

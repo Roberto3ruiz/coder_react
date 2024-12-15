@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
+import '../estilos/ItemDetail.css';
+
 
 const ItemDetail = ({producto}) => {
   const [compra, setCompra] = useState(false)
@@ -20,18 +22,23 @@ const ItemDetail = ({producto}) => {
     }
 console.log (cart)
 
-  return (
-   
-   <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
-    <span></span>
-      <h2 >Detalle de {producto.name}</h2>
-      <img src={producto.imagen} alt={producto.nombre} />
-      <p>{producto.lugar}</p>
-      <p>stock:{producto.stock}</p>
-      <p>${producto.price}</p> 
-      {compra ? <Link to='/cart'>Ir al Carrito</Link> : <ItemCount stock={producto.stock} initial={1} onAdd={onAdd}/>}
-    </div>
-  )
-}
+return (
+  <div className="item-detail-container">
+    <h2 className="item-detail-title">Detalle de {producto.name}</h2>
+    <img className="item-detail-image" src={producto.imagen} alt={producto.nombre} />
+    <p className="item-detail-location">{producto.lugar}</p>
+    <p className="item-detail-info">Stock: {producto.stock}</p>
+    <p className="item-detail-price">${producto.price}</p>
+    {compra ? (
+      <Link className="item-detail-button" to="/cart">Ir al Carrito</Link>
+    ) : (
+      <div className="item-count-button">
+        <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
+      </div>
+    )}
+  </div>
+);
+};
+
 
 export default ItemDetail
