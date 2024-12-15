@@ -1,32 +1,46 @@
 import { useEffect, useState } from "react";
-
 import { getProducts } from "../mock/Api";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../services/firebase";
 
 const ItemListContainer = ({ greeting }) => {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const { categoryId } = useParams();
+    const { categoryId } = useParams(); // Usamos categoryId desde los parámetros de la ruta
 
     useEffect(() => {
         setIsLoading(true);
-        getProducts()
+
+        // Conectar con la colección en Firestore
+        const productsCollection = collection (db, "productos");
+
+        // Pedir documentos
+        getDocs(productsCollection)
             .then((res) => {
+                const list = res.docs.map((product) => {
+                    return {
+                        id: product.id,
+                        ...product.data(),
+                    };
+                });
+
+                // Filtrar por categoría si `categoryId` está definida
                 if (categoryId) {
-                    // Filter products by category
-                    setItems(res.filter((product) => product.category === categoryId));
+                    const filteredList = list.filter((item) => item.category === categoryId);
+                    setItems(filteredList);
                 } else {
-                    // Set all products
-                    setItems(res);
+                    setItems(list);
                 }
-                setIsLoading(false);
             })
             .catch((error) => {
-                console.log(error);
+                console.error("Error al cargar productos:", error);
+            })
+            .finally(() => {
                 setIsLoading(false);
             });
-    }, [categoryId]);
+    }, [categoryId]); // Usamos categoryId como dependencia
 
     return (
         <div>
