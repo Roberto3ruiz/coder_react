@@ -4,11 +4,11 @@
 
 .navContainer {
   width: 100%;
-  padding: 10px 20px;
+  padding: 40px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(0, 0, 0);
 }
 
 .navLinks {
@@ -17,18 +17,18 @@
 }
 
 .logo {
-  width: 150px; /* Reduce el ancho del logo si es necesario */
+  width: 250px; /* Reduce el ancho del logo si es necesario */
   height: auto;
 }
 
 .alink {
   color: azure;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
 }
 
 .alink:hover {
-  color: #ffd700; /* Cambia el color al pasar el cursor */
+  color: #ff5d05; /* Cambia el color al pasar el cursor */
 }
 
 .cartWidgetContainer {
@@ -43,4 +43,15 @@
 
 .cartCounter {
   color: orange;
+}
+
+/* Media Query para pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+  .alink {
+    font-size: 14px; /* Reduce el tamaño del texto en los enlaces */
+  }
+
+  .navLinks {
+    font-size: 14px; /* Aplica el tamaño a todos los elementos dentro de navLinks si corresponde */
+  }
 }

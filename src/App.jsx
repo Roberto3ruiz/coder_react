@@ -6,8 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from "./context/CartContext";
 import CartView from "./components/CartView";
 import Checkout from "./components/Checkout";
-
-
+import HeroBanner from "./components/HeroBanner";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -15,6 +15,9 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         <NavbarComponent />
+       
+        <HeroBanner/>
+       
         <Routes>
 
           <Route path='/' element={<ItemListContainer greeting='Bienvenidos' />} />
@@ -25,7 +28,7 @@ function App() {
 
         </Routes>
 
-
+        <Footer /> 
       </BrowserRouter>
     </CartProvider>
 

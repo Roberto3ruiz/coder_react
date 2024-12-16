@@ -1,0 +1,35 @@
+.hero-banner {
+    width: 100%;
+    height: 60vh; /* Ajusta la altura  */
+    background: url('/hero.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    background-position: top right; /* Asegura que la corredora esté visible */
+}
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff5d05;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .hero-btn:hover {
+    background-color: #e05404;
+  }

@@ -11,7 +11,7 @@ const CartView = () => {
         <div>
 
             {!cart.length ? <EmptyCart /> : <div>
-                <h2>RUNSEEKER</h2>
+              
                 <CartList/>
             </div>
             }
